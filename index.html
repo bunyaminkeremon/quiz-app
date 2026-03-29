@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app">
+        <!-- Start Screen -->
+        <div class="screen" id="startScreen">
+            <h1>Quiz App</h1>
+            <p class="intro">Test your knowledge. Pick a category, answer 10 questions, beat the clock.</p>
+            <div class="settings">
+                <label>Category</label>
+                <select id="categorySelect">
+                    <option value="9">General Knowledge</option>
+                    <option value="18">Computers</option>
+                    <option value="21">Sports</option>
+                    <option value="23">History</option>
+                    <option value="17">Science & Nature</option>
+                    <option value="22">Geography</option>
+                    <option value="11">Film</option>
+                    <option value="12">Music</option>
+                </select>
+                <label>Difficulty</label>
+                <select id="difficultySelect">
+                    <option value="easy">Easy</option>
+                    <option value="medium" selected>Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <button class="start-btn" id="startBtn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="screen hidden" id="quizScreen">
+            <div class="quiz-header">
+                <span class="question-count" id="questionCount">1 / 10</span>
+                <span class="timer" id="timer">30</span>
+                <span class="score-display" id="scoreDisplay">Score: 0</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+            <div class="question" id="question"></div>
+            <div class="options" id="options"></div>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="screen hidden" id="resultScreen">
+            <h2 id="resultTitle"></h2>
+            <div class="score-circle" id="scoreCircle">
+                <span class="final-score" id="finalScore">0</span>
+                <span class="score-label">/ 10</span>
+            </div>
+            <div class="result-stats" id="resultStats"></div>
+            <div class="result-buttons">
+                <button class="retry-btn" id="retryBtn">Try Again</button>
+                <button class="home-btn" id="homeBtn">Home</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
